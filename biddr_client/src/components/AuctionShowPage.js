@@ -30,18 +30,18 @@ export const AuctionShowPage = props => {
   return auction ? (
     <main>
       <h1 className="ui header">{auction.title}</h1>
-      <p className="auction-item">Added by {auction.owner.full_name} on {new Date(auction.created_at).toLocaleDateString()}</p>
+      <p className="field">Added by {auction.owner.full_name} on {new Date(auction.created_at).toLocaleDateString()}</p>
       
       <h4 className="ui header">Description:</h4>
-      <p className="auction-item">{auction.description}</p>
+      <p className="field">{auction.description}</p>
 
       <h4 className="ui header">Ends At:</h4>
-      <p className="auction-item">{new Date(auction.ends_at).toLocaleDateString()}</p>
+      <p className="field">{new Date(auction.ends_at).toLocaleDateString()}</p>
 
       <h4 className="ui header">Current Price:</h4>
-      <p className="auction-item">${auction.current_price}</p>
+      <p className="field">{auction.current_price}</p>
 
-      <p className="auction-item">{auction.reserve_price}</p>
+      <p className="field">{auction.reserve_price}</p>
 
       <form 
         className="ui form" 
@@ -64,7 +64,7 @@ export const AuctionShowPage = props => {
                 min={auction.current_price}
             />
           </div>
-          <button className="ui orange button" type="submit">
+          <button className="ui primary button" type="submit">
                 Bid
           </button>
       </form>
