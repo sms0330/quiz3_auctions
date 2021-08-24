@@ -47,7 +47,7 @@ users = User.all
         a.bids = rand(0..15).times.map do
             random_date = Faker::Date.backward(days:365 * 5)
             Bid.new(
-                price: rand(100_000),
+                price: Faker::Number.within(range: 100..50000),
                 created_at: random_date,
                 updated_at: random_date,
                 user: users.sample
