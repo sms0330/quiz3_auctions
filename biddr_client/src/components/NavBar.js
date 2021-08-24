@@ -16,7 +16,7 @@ export function NavBar(props) {
     <nav className="navbar navbar-light bg-light" >
             <NavLink exact to="/" className="item right menu">Home</NavLink>
             <NavLink exact to="/auctions" className="item">Auctions</NavLink>
-            <NavLink exact to="/auctions/new" className="item">Add</NavLink>
+            <NavLink exact to="/auctions/new" className="item">New</NavLink>
             <NavLink exact to="sign_up" className="item">Sign Up</NavLink>
             {!currentUser && (
                 <NavLink exact to="/sign_in" className="item">Sign In</NavLink>
