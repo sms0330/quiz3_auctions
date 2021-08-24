@@ -1,0 +1,36 @@
+html {
+  padding: 2rem;
+}
+nav {
+  display: flex;
+  padding: 1rem;
+}
+.nav-item {
+  padding-left: 2rem;
+  font-size: 1.25rem;
+}
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+}
+a {
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: none !important;
+}
+.Welcome {
+  background-image: url('bill-oxford-OXGhu60NwxU-unsplash.jpeg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
+
+.Welcome-text {
+  text-align: left;
+  font-size: 5em;
+  padding-top: 30px;
+  padding-left: 30px;
+  color: white;
+}
