@@ -5,6 +5,7 @@ import { AuctionShowPage } from './components/AuctionShowPage';
 import { AuctionIndexPage } from './components/AuctionIndexPage';
 import { WelcomePage } from './components/WelcomePage.js';
 import { SignInPage } from './components/SignInPage';
+import { SignUpPage } from './components/SignUpPage';
 import { NotFoundPage } from './components/NotFoundPage';
 import { NavBar } from './components/NavBar';
 import { User } from './requests';
@@ -77,6 +78,12 @@ class App extends React.Component {
                     path="/sign_in"
                     render={routeProps => (
                         <SignInPage {...routeProps} onSignIn={this.getUser} />
+                    )}  
+                />
+                <Route 
+                    path="/sign_up"
+                    render={routeProps => (
+                        <SignUpPage {...routeProps} onSignUp={this.getUser} />
                     )}  
                 />
                 <Route component={NotFoundPage} />

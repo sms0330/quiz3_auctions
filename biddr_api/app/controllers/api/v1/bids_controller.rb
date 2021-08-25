@@ -15,6 +15,6 @@ class Api::V1::BidsController < Api::ApplicationController
     private
 
     def bid_params
-        params.require(:bid).permit(:id, :bid_price, :current_price)
+        params.require(:bid).permit(:price, :auction_id)
     end
 end
