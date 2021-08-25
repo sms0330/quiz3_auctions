@@ -7,10 +7,11 @@ nav {
 }
 .nav-item {
   padding-left: 2rem;
+  padding-right: 1rem;
   font-size: 1.25rem;
 }
 .navbar-brand {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 a {

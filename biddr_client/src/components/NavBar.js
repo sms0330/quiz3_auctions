@@ -14,12 +14,14 @@ export function NavBar(props) {
   };
   return (
     <nav className="navbar navbar-light bg-light" >
-            <NavLink exact to="/" className="item right menu">Home</NavLink>
-            <NavLink exact to="/auctions" className="item">Auctions</NavLink>
-            <NavLink exact to="/auctions/new" className="item">New</NavLink>
-            <NavLink exact to="sign_up" className="item">Sign Up</NavLink>
+            <div className="navbar-brand">Auctions</div>
+            <span class="nav justify-content-end">
+            <NavLink exact to="/" className="nav-item">Home</NavLink>
+            <NavLink exact to="/auctions" className="nav-item">Auctions</NavLink>
+            <NavLink exact to="/auctions/new" className="nav-item">New</NavLink>
+            <NavLink exact to="sign_up" className="nav-item">Sign Up</NavLink>
             {!currentUser && (
-                <NavLink exact to="/sign_in" className="item">Sign In</NavLink>
+                <NavLink exact to="/sign_in" className="nav-item">Sign In</NavLink>
             )}
             {currentUser && (
                 <>
@@ -34,6 +36,7 @@ export function NavBar(props) {
                     </button>
                 </>
             )}
+            </span>
     </nav>
   );
 }
