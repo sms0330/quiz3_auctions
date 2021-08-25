@@ -19,7 +19,7 @@ export const AuctionIndexPage = () => {
           {auctions.map((auction, index) => (
             <li key={index}>
               <Link to={`/auctions/${auction.id}`}>{auction.title}</Link>
-              <p>Price: {auction.price} </p>
+              <p>Price: ${auction.reserve_price} </p>
               <p>Created at: {new Date(auction.created_at).toLocaleDateString()}</p>
               <p>Owner: {auction.owner ? auction.owner.full_name : null}</p>
             </li>
