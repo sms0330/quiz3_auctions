@@ -34,10 +34,21 @@ export const AuctionShowPage = props => {
         props.history.push(`/auctions/${data.auction_id}`);
       } else {
         setErrors(data.errors);
+        console.log(errors)
       }
     });
     currentTarget.reset();
     window.location.reload();
+  };
+
+  const currentPrice = auction => {
+    let currentPrice = 0;
+    auction.bids.forEach(bid => {
+      if (bid.price > currentPrice) {
+        currentPrice = bid.price;
+      };
+    });
+    return currentPrice;
   };
 
   return auction ? (
@@ -54,9 +65,9 @@ export const AuctionShowPage = props => {
       <p className="field">{new Date(auction.ends_at).toLocaleDateString()}</p>
 
       <h4 className="ui header">Current Price:</h4>
-      <p className="field">{auction.current_price}</p>
+      <p className="field">${currentPrice(auction)}</p>
 
-      <p className="field">{auction.reserve_price}</p>
+      {/* <p className="field">{auction.reserve_price}</p> */}
 
       <NewBidForm current_price={bid.price} onChange={setBid} createBid={createBid} />
       <BidList bids={auction.bids} />

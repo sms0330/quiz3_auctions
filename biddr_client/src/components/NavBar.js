@@ -15,7 +15,7 @@ export function NavBar(props) {
   return (
     <nav className="navbar navbar-light bg-light" >
             <div className="navbar-brand">Auctions</div>
-            <span class="nav justify-content-end">
+            <span className="nav justify-content-end">
             <NavLink exact to="/" className="nav-item">Home</NavLink>
             <NavLink exact to="/auctions" className="nav-item">Auctions</NavLink>
             <NavLink exact to="/auctions/new" className="nav-item">New</NavLink>
